@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back">
+        <nav>
+            <h2 class="logo">Rnz <span>ke</span></h2>
+            <div class="menu-toggle">&#9776;</div>
+            <ul class="nav-links">
+               <li><a href="#">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="#">Portfolio</a></li>
+               <li><button class="contact-btn" type="button" >Contact Now</button></li>
+            </ul>
+        </nav>  
+
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Welcome to My World</h1>
+                <h2 id="animated-text"></h2>
+                <h3></h3>
+            </div>
+            <div class="hero-image">
+                <img src="Photoroom-20250113_145634.jpg" alt="Renzkie's Profile">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <a href="https://facebook.com/Renzkiebal" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/renzkie-baldado-55aa882b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&fbclid=IwY2xjawI576NleHRuA2FlbQIxMAABHbKvLYHwMVEDewGHq4O6EovGRYwbb7Nc7jYhKrr5899Kiy7ybGM9kxfyPw_aem_JgXv6b6svreG2BMP092vxg" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:renzkebaldado@gmail.com"><img src="gmail.png" alt="Gmail"></a>
+        </div>
+        <div class="footer-right">
+            <p>"Hindi mabubuhay ang kambing kung walang damo" - Demakina</p>
+        </div>
+    </footer>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+    </div>
+</div>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

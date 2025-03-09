@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.back {
+
+        background: linear-gradient(135deg, #000000, #330000);
+        min-height: 90vh;   
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+   
+    z-index: 10;
+    position: relative;
+
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+span {
+    color: red;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links li a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background: red;
+    border-radius: 5px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: red;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: red;
+    box-shadow: 0px 0px 10px red;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+    
+}
+
+.hero-text h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-text h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 4vw;
+    color: red;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text h3 {
+    font-size: 2.5vw;
+    font-weight: normal;
+    color: white;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+    border-top: 2px solid red;
+}
+
+.footer-left {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-left a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-left a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-right {
+    font-style: italic;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-text h1 {
+        font-size: 7vw;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-left {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px red;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+.modal-content label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: black; 
+    opacity: 1; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+
+.modal {
+    display: none;
+}

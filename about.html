@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="l.css">
+    
+</head>
+
+<body>
+    <div class="back">
+        <nav>
+            <h2 class="logo">Rnz <span>ke</span></h2>
+            <div class="menu-toggle">&#9776;</div>
+            <ul class="nav-links">
+               <li><a href="portfolio.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="#">Portfolio</a></li>
+               <li><button class="contact-btn" type="button" >Contact Now</button></li>
+            </ul>
+        </nav>  
+
+    <div class="container">
+        <div class="profile">
+            <div class="pic">
+                <img src="Photoroom-20250113_145634.jpg" alt="Profile Picture">
+            </div>
+            <div class="inf">
+                <h2>Renzkie Baldado</h2>
+                <p>Computer Science Student</p>
+                <p>Aspiring Software Engineer & Data Analyst</p>
+            </div>
+        </div>
+
+        <div class="about-box">
+            <div class="about">
+                <h1>About Me</h1>
+                <p>I am a passionate computer scientist, programmer, and data analyst...</p>
+                <p>With experience in programming, data analysis, and system optimization...</p>
+                <p>Let's connect and build something amazing!</p>
+            </div>
+
+            <div class="basic">
+                <div id="interest">
+                    <h4>Interests</h4>
+                    <ul>
+                        <li>Programming</li>
+                        <li>Data Analysis</li>
+                        <li>Software Development</li>
+                    </ul>
+                </div>
+                <div id="education">
+                    <h4>Education</h4>
+                    <p>Negros Oriental State University</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+    
+                <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactBtn = document.querySelector(".contact-btn");
+    const modal = document.getElementById("contactModal");
+    const closeBtn = document.querySelector(".close");
+
+    contactBtn.addEventListener("click", function (event) {
+        event.preventDefault(); 
+        modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+   
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>
