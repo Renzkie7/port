@@ -45,7 +45,9 @@ span {
     font-weight: <weight>;
     font-style: normal;
 }
-
+.logo:hover {
+    transform: scale(1.1); 
+}
 .nav-links {
     list-style: none;
     display: flex;
